@@ -1,0 +1,6 @@
+README.md
+setup.py
+momentpy.egg-info/PKG-INFO
+momentpy.egg-info/SOURCES.txt
+momentpy.egg-info/dependency_links.txt
+momentpy.egg-info/top_level.txt
