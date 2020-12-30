@@ -1,2 +1,4 @@
 momentpy/__pycache__/
 VirtualEnvironment
+venv
+.idea
