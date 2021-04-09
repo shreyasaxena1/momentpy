@@ -1,45 +1,53 @@
 # @param dayNum: Integer -> The Number of the weekday
 # @return [String, String] -> List of String with Full Weekday and Weekday in short Format
 def getDayString(dayNum):
-    if dayNum==0:
-        return ['Monday', 'Mon']
-    elif dayNum==1:
-        return ['Tuesday', 'Tue']
-    elif dayNum==2:
-        return ['Wednesday', 'Wed']
-    elif dayNum==3:
-        return ['Thursday', 'Thur']
-    elif dayNum==4:
-        return ['Friday', 'Fri']
-    elif dayNum==5:
-        return ['Saturday', 'Sat']
-    elif dayNum==6:
-        return ['Sunday', 'Sun']
+     dayDict = {  
+        1: ['Monday' ,'Jan'],
+        2: ['Tuesday','Feb'],
+        3: ['Wednesday','Mar'],
+        4: ['Thursday','Apr'],
+        5: ['Friday','May'],
+        6: ['Saturday', 'Jun'],
+        7: ['Sunday', 'Jul'],
+     }
+    return dayDict.get(dayNum,['Invalid'])
 
 # @param monthNum: Integer -> The Number of the month
 # @return [String, String] -> List of String with Full Month String and Full Month in short format
-def getMonthString(monthNum):
-    if monthNum==0:
-        return ['January', 'Jan']
-    elif monthNum==1:
-        return ['February', 'Feb']
-    elif monthNum==2:
-        return ['March', 'Mar']
-    elif monthNum==3:
-        return ['April', 'Apr']
-    elif monthNum==4:
-        return ['May', 'May']
-    elif monthNum==5:
-        return ['June', 'Jun']
-    elif monthNum==6:
-        return ['July', 'Jul']
-    elif monthNum==7:
-        return ['August', 'Aug']
-    elif monthNum==8:
-        return ['September', 'Sep']
-    elif monthNum==9:
-        return ['October', 'Oct']
-    elif monthNum==10:
-        return ['November', 'Nov']
-    elif monthNum==11:
-        return ['December', 'Dec']
+def getMonthString(monNum):
+    monthDict = {
+        1: ['January' ,'Jan'],
+        2: ['February','Feb'],
+        3: ['March','Mar'],
+        4: ['April','Apr'],
+        5: ['May','May'],
+        6: ['June', 'Jun'],
+        7: ['July', 'Jul'],
+        8: ['August', 'Aug'],
+        9: ['September', 'Sep'],
+        10: ['October', 'Oct'],
+        11: ['November', 'Nov'],
+        12: ['December', 'Dec']
+    }
+    return monthDict.get(monNum,['Invalid'])
+
+# @param monthNum: Integer -> Current Year
+# @return nextLeap: Integer -> Next Leap Year
+def IsLeapYear(year):
+ if (year % 4) == 0:
+     if (year % 100) == 0:
+         if (year % 400) == 0:
+           return True
+         else:
+           return False
+     else:
+         return True
+ else:
+     return False     
+
+def GetNextLeapYear(CurrYear):
+    nextLeap = CurrYear
+    while(IsLeapYear(nextLeap)==False):
+        nextLeap =  nextLeap +1
+    return nextLeap
+    
