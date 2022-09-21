@@ -2,13 +2,13 @@
 # @return [String, String] -> List of String with Full Weekday and Weekday in short Format
 def getDayString(dayNum):
     dayDict = {  
-        1: ['Monday' ,'Jan'],
-        2: ['Tuesday','Feb'],
-        3: ['Wednesday','Mar'],
-        4: ['Thursday','Apr'],
-        5: ['Friday','May'],
-        6: ['Saturday', 'Jun'],
-        7: ['Sunday', 'Jul'],
+        1: ['Monday' ,'Mon'],
+        2: ['Tuesday','Tue'],
+        3: ['Wednesday','Wed'],
+        4: ['Thursday','Thu'],
+        5: ['Friday','Fri'],
+        6: ['Saturday', 'Sat'],
+        7: ['Sunday', 'Sun'],
      }
     return dayDict.get(dayNum,['Invalid'])
 # @param monthNum: Integer -> The Number of the month
